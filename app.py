@@ -4,7 +4,7 @@ import plotly.express as px
 import pathlib
 import platform
 plt = platform.system()
-if plt  =='Linux': pathlib.Windowspath = pathlib.PosixPath
+if plt  == 'Linux': pathlib.Windowspath = pathlib.PosixPath
 
 
 # title
@@ -29,6 +29,6 @@ if file:
     st.success(f"Bashorat: {pred}")
     st.info(f"Ehtimolilik: {probs[pred_id]*100:.1f}%")
 
-#plotting
-fig = px.bar(x=probs*100, y= model.dls.vocab)
-st.plotly_chart(fig) 
+    #plotting
+    fig = px.bar(x=probs*100, y= model.dls.vocab)
+    st.plotly_chart(fig) 
